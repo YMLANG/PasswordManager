@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="810dp"
+        android:background="@android:color/background_light"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="false" />
+
+        <TextView
+            android:id="@+id/item_platform"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/item_icon"
+            android:paddingTop="4dp"
+            android:text="ITEM PLATFORM"
+            android:textColor="#212121"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_username"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_platform"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/item_icon"
+            android:text="ITEM USER"
+            android:textColor="#212121"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/item_password"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_username"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/item_icon"
+            android:text="ITEM PASSWORD"
+            android:textColor="#9E9E9E"
+            android:textSize="18dp" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
