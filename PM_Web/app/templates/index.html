@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Password Manager</h1>
+<form method="post">
+<input type="submit" name="logout" value="Logout">
+</form>
+<a href="{{ url_for('add_account') }}">
+    <button>Add an account</button>
+</a>
+<h2>Current accounts stored</h2>
+{% for account_details in user_accounts %}
+    {% for key, value in account_details.items() %}
+        <ul>
+            <li>{{ key }}: </li><br>
+            {% for key2, value2 in value.items() %}
+            <li>{{ key2 }}: {{ value2 }}</li>
+            {% endfor %}
+        </ul>
+        <br>
+    {% endfor %}
+    <br>
+{% endfor %}
+</body>
+</html>

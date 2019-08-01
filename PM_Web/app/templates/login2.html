@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dif="ltr">
+    <head>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" width="150" height="150">
+        <meta charset="utf-8">
+        <title>keyStore</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+
+    <!-- Error message prints here-->
+    {% if message %}
+      <h4>{{ message }}</h4>
+    {% endif %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+              <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+      {% endif %}
+    {% endwith %}
+
+<form class="box" method="post">
+    <h1> keyStore </h1>
+    <input type="text" name="email" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" name="login" value="Login">
+    <input type="submit" name="register" value="Register">
+    <input type="submit" name="forgot" value="Forgot Password">
+</form>
+
+
+</body>
+</html>

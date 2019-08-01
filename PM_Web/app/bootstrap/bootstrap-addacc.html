@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="account.css">
+  </head>
+
+<body>
+<h1>Password Manager</h1>
+  <Form method="post">
+      <input type="text" name="service" placeholder="Service" required="required" />
+      <input type="text" name="user" placeholder="Username/Email" required="required" />
+      <input type="text" id="password" name="password" placeholder="Password" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+  </form>
+<br>
+
+  <input id="password_length" type="text" name="password_length" placeholder="Password Length"/><br>
+  <input id="special_symbols" type="checkbox" name="special_symbols">Include Special Symbols<br>
+  <input id="upper_case" type="checkbox" name="upper_case">Include Upper Case<br>
+  <input id="numbers" type="checkbox" name="numbers">Include Numbers<br>
+  <button onclick="generatePassword();">Generate Password</button>
+
+  <script>
+    function generateRandomNumber(min, max) {
+        var array = new Uint16Array(1);
+        window.crypto.getRandomValues(array);
+
+        var range = max - min + 1;
+        var max_range = 65536;
+
+        if (array[0] >= Math.floor(max_range/range) * range) { return generateRandomNumber(min, max); }
+        return min + (array[0] % range);
+    };
+
+  function generatePassword() {
+      var password_length = document.getElementById("password_length").value,
+      special_symbols = document.getElementById("special_symbols").checked,
+      upper_case = document.getElementById("upper_case").checked,
+      numbers = document.getElementById("numbers").checked,
+      password = "",
+      chars_to_use = "abcdefghijklmnopqrstuvwxyz",
+      characters = [
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "0123456789",
+          "!@#$%^&*()-=_+{}[]<>,."
+      ];
+      if (password_length === "" || parseInt(password_length) == 0) { password_length = "16"; }
+      if (special_symbols) { chars_to_use += characters[2]; }
+      if (upper_case) { chars_to_use += characters[0]; }
+      if (numbers) { chars_to_use += characters[1]; }
+
+      for (i = 0; i < parseInt(password_length); i++) {
+          password += chars_to_use.charAt(generateRandomNumber(0, chars_to_use.length));
+      }
+
+      document.getElementById("password").value=password;
+  };
+  </script>
+
+
+</body>
+</html>

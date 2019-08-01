@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='account.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='passwordGen.js') }}"></script>
+  </head>
+ <body>
+<h2>Add an account/Generate a password</h2>
+  <form method="post">
+      <input type="text" name="service" placeholder="Service" required="required" />
+      <input type="text" name="user" placeholder="Username/Email" required="required" />
+      <input type="text" id="password" name="password" placeholder="Password" required="required" />
+      <input type="submit" name="add_account" value="Add account">
+      <input type="submit" name="cancel" value="Cancel" formnovalidate>
+  </form> <br>
+
+    <h5>Start generating a password by specifying a desired length (default 16 characters)</h5>
+    <input id="password_length" type="text" name="password_length" placeholder="Password Length"/>
+    <h5>Password Strength: </h5>
+    <input id="password_strength" type="text" value="Weak" style="background-color: red; text-align: center" readonly>
+    <input id="special_symbols" type="checkbox" name="special_symbols">Include Special Symbols<br>
+    <input id="upper_case" type="checkbox" name="upper_case">Include Upper Case<br>
+    <input id="numbers" type="checkbox" name="numbers">Include Numbers<br>
+    <button onclick="generatePassword();">Generate Password</button>
+    
+</body>
+
+
+</html>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup Page</title>
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Catamaran|Gloria+Hallelujah" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+div.title { font-size: 66px;}
+div.textbox { font-size: 25px;}
+div.navSize { font-size: 17px;}
+div.name { font-size: 20px;}
+
+div.signup { 
+  position: absolute;
+  top: 376px;
+  left: 47.5%;
+  margin: -150px 0 0 -150px;
+  width:371px;
+  height:300px;
+}
+
+html {
+  width: 100%;
+  height:100%;
+}
+
+body { 
+  width: 100%;
+  height:100%;
+  background: -webkit-linear-gradient(bottom, #fbfbfb 1%, #060606 80%), -webkit-linear-gradient(-45deg, #060606 10%,#c0c0c0 90%);
+}
+
+input { 
+  width: 100%; 
+  margin-bottom: 10px; 
+  background: rgba(0,0,0,0.3);
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 13px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+  box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+  -webkit-transition: box-shadow .5s ease;
+  -moz-transition: box-shadow .5s ease;
+  -o-transition: box-shadow .5s ease;
+  -ms-transition: box-shadow .5s ease;
+  transition: box-shadow .5s ease;
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); 
+}
+
+</style>
+</head>
+
+
+<body>
+   
+  <div class="navSize">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <!-- <span class="icon-bar"></span>
+            <span class="icon-bar"></span> -->
+          </button>
+          <a class="navbar-brand" href="/">
+              <img src="/static/home.png" class="d-inline-block align-top" alt="" style=" height: 40px; margin-top: -9px;">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- <ul class="nav navbar-nav mr-auto">
+            <li><a href="password">Password</a></li>
+          </ul> -->
+          <ul class="nav navbar-nav mr-auto navbar-right">
+            <li><a href="about">About</a></li>
+            <li><a href="faq">FAQ</a></li>
+          <!-- <li><a href="/">Log in</a></li>
+            <li><a href="sign_up">Sign up</a></li> 
+          -->
+          </ul>
+        </div>
+
+    </nav>
+  </div>
+  <br>
+
+  <form method="post">
+
+    <center>
+    <div class="title">
+      <font color="white" style="font-family:'Times'">Key Store</font>
+    </div>
+
+    <!-- Error message prints here-->
+    {% if message %}
+      <h4>{{ message }}</h4>
+    {% endif %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+              <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+      {% endif %}
+    {% endwith %}
+
+    <div class="signup">
+      <!-- <h1>Login</h1> -->
+      <div class="name">
+        <font color="white" style="Times">Your Username: </font><br>
+      </div>
+
+      <input type="email" name="email" placeholder="Enter Your Email" required="required" />
+      <medium id="passwordHelpInline" class="text-danger"><i><b>
+      Username must be ......
+      </i></b></medium><br><br>
+
+      <div class="name">
+        <font color="white" style="Times">Your Password: </font><br>
+      </div>
+
+      <input type="password" name="password" placeholder="Create Your Password" required="required" />
+      <medium id="passwordHelpInline" class="text-danger"><i><b>
+      Password must be ......
+      </b></i></medium><br><br>
+
+      <div class="name">
+        <font color="white" style="Times">Confirm Password: </font><br>
+      </div>
+
+      <input type="password" name="confirm_password" placeholder="Confirm Your Password" required="required" />
+      <br><br><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+
+    </div>
+
+  </form>
+
+</body>
+</html>
+
+
+
+    

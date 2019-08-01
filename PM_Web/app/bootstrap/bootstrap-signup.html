@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="urf-8">
+		<title>Register Form</title>
+		<link rel="stylesheet" href="signup.css">
+	</head>
+	<body>
+
+<form class="box" action="bootstrap-signup.html" method="post">
+	<h1>Create your acount</h1>
+
+	    <!-- Error message prints here-->
+    {% if message %}
+      <h4>{{ message }}</h4>
+    {% endif %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+              <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+      {% endif %}
+    {% endwith %}
+
+	<input type="text" name="" placeholder="Email" required="required">
+	<medium id="passwordHelpInline" class="text-danger"><b>
+		Username must be a valid email
+	</b></medium>
+    <input type="password" name="" placeholder="Password" required="required">
+    <input type="password" name="" placeholder="Confirm Password">
+
+
+	<input type="signup" name="" value="Register">
+	<input type="return" name="" value="Back to homepage">
+</form>
+
+
+
+
+	</body>
+</html>

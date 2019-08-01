@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="urf-8">
+		<title>Profile</title>
+		<link rel="stylesheet" href="profile.css">
+	</head>
+	<body>
+
+<h1>Current accounts stored</h1>
+{% for account_details in user_accounts %
+    {% for key, value in account_details.items() %}
+        <ul>
+            <li>{{ key }}: {{ value }} </li>
+        </ul>
+    {% endfor %}
+    <br>
+{% endfor %}
+<form class="box" action="bootstrap-profile.html" method="post">
+	<input type="add" name="" value="Add an account">
+	<input type="return" name="" value="Log out">
+</form>
+
+
+
+
+	</body>
+</html>

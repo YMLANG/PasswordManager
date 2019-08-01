@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='account-2.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='passwordGen.js') }}"></script>
+  </head>
+
+ <body>
+    <form class="box" method="post">
+        <h2>Add an account to store</h2>
+        <input type="text" name="service" placeholder="Service" required="required">
+        <input type="text" name="user" placeholder="Email/Username" required="required">
+        <input type="text" name="password" id="password" placeholder="Password" required="required">
+        <input type="submit" name="add_account" value="Add an account">
+        <input type="submit" name="cancel" value="Cancel" formnovalidate>
+    </form> <br>
+    
+    <div class="buttons">
+        <h5> Want to generate a password? Please indicate a length and add requirements to generate a desired password.</h5>
+        <input type="text" id="password_length" name="pw_length" placeholder="Password length">
+        <h6>Password Strength: </h6>
+        <input id="password_strength" type="text" value="Weak" style="background-color: red; text-align: center" readonly><br><br>
+
+        <input type="checkbox" id="special_symbols" name="special_symbols" value="Special_Symbols">
+            <label for="special_symbols">Include special symbols</label>
+        <input type="checkbox" id="upper_case" name="upper_case" value="Upper_Case">
+            <label for="upper_case">Include upper cases</label>
+        <input type="checkbox" id="numbers" name="numbers" value="Numbers">
+            <label for="numbers">Include numbers</label>
+        <button onclick="generatePassword();" formnovalidate>Generate a password</button>
+    </div>
+
+</body>
+</html>

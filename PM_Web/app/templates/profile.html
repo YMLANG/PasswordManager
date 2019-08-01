@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="urf-8">
+		<title>Profile</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+	</head>
+	<body>
+
+<form class="box" method="post">
+    <h2>Current accounts stored<h2>
+    <h4>
+    {% for account_details in user_accounts %}
+        {% for key, value in account_details.items() %}
+            <ul>
+                <li>{{ key }}: </li>
+                {% for key2, value2 in value.items() %}
+                    <li>{{ key2 }}: {{ value2 }}</li>
+                {% endfor %}
+            </ul>
+            <br>
+        {% endfor %}
+        <br>
+    {% endfor %}
+    </h4>
+    <input type="submit" name="logout" value="Logout">
+    <input type="submit" name="add_account" value="Add an account">
+    <input type="submit" name="download" value="Download a copy of your accounts">
+    <input type="submit" name="restore" value="Restore accounts from backup">
+</form>
+	</body>
+</html>

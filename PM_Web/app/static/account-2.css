@@ -1,0 +1,90 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	background: #bdb7f0;
+ }
+
+ .column1 {
+	 float: left;
+	 width: 50%
+ }
+ 
+ .column2{
+	 float: left;
+	 width: 50%;
+	 margin: 20px;
+	 padding: 20px;
+ }
+
+ .row:after {
+	 content: "";
+	 display: table;
+	 clear: both;
+ }
+
+ .box {
+	width: 800px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #191919
+ }
+.box h1{
+	color: white;
+	font-weight: 500;
+	text-align: center;
+	margin: 70px;
+}
+ .box input[type = "text"] {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #120773;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+}
+ .box input[type = "submit"] {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 60px auto;
+	text-align: center;
+	border: 2px solid #120773;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+ .box input[type = "submit"]:hover {
+	background: #120773;
+} 
+
+#button{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 60px auto;
+	text-align: center;
+	border: 2px solid #120773;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+#button:hover{
+	background: #120773;
+}

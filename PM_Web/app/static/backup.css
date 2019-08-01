@@ -1,0 +1,80 @@
+@media only screen and (min-width: 961px) {
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+		background: #bdb7f0;
+		text-align: center;
+	}
+
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	margin: 100px;
+	font-weight: 500;
+}
+
+h4 {
+  color: white;
+	text-align: center;
+	margin: 100px;
+	font-weight: 500; 
+}
+
+ul {
+    list-style-type: none;
+		width: 500px;
+		text-align: center;
+  }
+  
+  li p {
+		font: 200 12px/1.5 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+		text-align: center;
+  }
+  
+  li {
+    padding: 10px;
+		overflow: auto;
+		text-align: center;
+  }
+
+  input[type = "file"] {
+    border: 0;
+		background: none;
+		display: block;
+		margin: 20px auto;
+		text-align: center;
+		border: 2px solid #120773;
+		padding: 14px 40px;
+		outline: none;
+		color: white;
+		border-radius: 24px;
+		transition: 0.25s;
+		cursor: pointer;
+  }
+
+  input[type = "submit"]:hover {
+	background: #120773;
+}
+
+
+  input[type = "submit"] {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #120773;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+input[type = "submit"]:hover {
+	background: #120773;
+}

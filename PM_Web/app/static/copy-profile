@@ -1,0 +1,47 @@
+body{
+	margin: 50px;
+	padding: 0;
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	background: #bdb7f0;
+
+}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+}
+
+li p {
+  font: 200 12px/1.5 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+.box h1{
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	margin: 70px;
+}
+
+.box input[type = "submit"] {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #120773;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+.box input[type = "submit"]:hover {
+	background: #120773;
+}
